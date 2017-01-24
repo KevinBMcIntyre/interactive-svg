@@ -16,6 +16,29 @@ html {
   box-sizing: inherit;
 }
 
+#left-eye, #right-eye {
+  animation: move 1s infinite alternate linear;
+}
+
+@keyframes move {
+
+  0% { transform: translate(-10px, 0); }
+
+  100% { transform: translate(10px, 0); }
+}
+
+#bear {
+  transition: all .5s linear;
+}
+
+#bear > #right-ear, #bear > #left-ear {
+  transition: all .5s linear;
+}
+
+#bear:hover > #right-ear, #bear:hover > #left-ear {
+  transform: translateY(-10px);
+}
+
 .st0 {
   fill: #673200;
 }
